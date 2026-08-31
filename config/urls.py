@@ -21,5 +21,7 @@ from core import urls
 
 urlpatterns = [
     path('', include('core.urls')),
+    path('autos/', include('Autos.urls')),
+    path('precios/', include('Precios.urls')),
     path('admin/', admin.site.urls),
 ]

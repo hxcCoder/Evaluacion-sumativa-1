@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <h2>{{ titulo }}</h2> <!-- Aquí imprimimos la variable titulo del contexto -->
+
+    <!-- Evaluamos con IF si la lista tiene elementos -->
+    {% if lista_autos %}
+        <ul>
+            <!-- Recorremos la lista con FOR -->
+            {% for auto in lista_autos %}
+                <li>{{ auto.marca }} {{ auto.modelo }} (Año: {{ auto.año }})</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>En este momento no hay autos disponibles en el catálogo.</p>
+    {% endif %}
+{% endblock %}
