@@ -7,8 +7,8 @@ Este proyecto es un catálogo interactivo desarrollado en Django para un taller 
 * Benjamin Millalonco
 
 ## Requisitos e Instalación
-1. Clonar el repositorio: `git clone [URL_DEL_REPOSITORIO]`
-2. Entrar a la carpeta: `cd [NOMBRE_CARPETA]`
+1. Clonar el repositorio: `git clone https://github.com/hxcCoder/Evaluacion-sumativa-1.git`
+2. Entrar a la carpeta: `cd evaluacion-sumativa-1`
 3. Crear entorno virtual: `python -m venv .venv`
 4. Activar entorno virtual: 
    * Windows: `.venv\Scripts\activate`
