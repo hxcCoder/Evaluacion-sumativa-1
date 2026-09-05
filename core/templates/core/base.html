@@ -8,14 +8,14 @@
     <header>
         <h1>Mi Proyecto Automotriz</h1>
         <nav>
-            <!-- Aquí usamos la etiqueta URL que pide la rúbrica -->
             <a href="{% url 'inicio' %}">Inicio</a> | 
-            <a href="{% url 'catalogo_autos' %}">Ver Catálogo de Autos</a>
+            <a href="{% url 'catalogo_autos' %}">Ver Catálogo de Autos</a> |
+            <a href="{% url 'lista_precios' %}">Precios de Servicios</a> |
+            <a href="{% url 'contacto' %}">Contacto</a>
         </nav>
     </header>
     
     <main>
-        <!-- Este bloque será reemplazado por el contenido de las otras páginas -->
         {% block contenido %}
         {% endblock %}
     </main>

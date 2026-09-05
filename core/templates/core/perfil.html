@@ -1,0 +1,7 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <h2>Perfil de Usuario</h2>
+    <!-- Aquí demostramos el uso de la variable de contexto que pasamos desde la URL a la vista -->
+    <p>Bienvenido a tu perfil, <strong>{{ nombre }}</strong>.</p>
+{% endblock %}

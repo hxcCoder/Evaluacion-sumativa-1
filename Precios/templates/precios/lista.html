@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <h2>{{ titulo }}</h2>
+    
+    {% if lista_servicios %}
+        <ul>
+            {% for item in lista_servicios %}
+                <li>{{ item.servicio }} - ${{ item.precio }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay precios configurados en este momento.</p>
+    {% endif %}
+{% endblock %}
