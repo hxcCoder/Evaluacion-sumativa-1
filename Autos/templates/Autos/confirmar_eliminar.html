@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <h2>¿Confirmas eliminar este vehículo?</h2>
+    <p><strong>{{ auto.marca }} {{ auto.modelo }} ({{ auto.año }})</strong></p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sí, eliminar</button>
+        <a href="{% url 'catalogo_autos' %}">Cancelar</a>
+    </form>
+{% endblock %}

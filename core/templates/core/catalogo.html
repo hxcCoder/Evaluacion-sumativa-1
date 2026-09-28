@@ -1,14 +1,18 @@
 {% extends 'core/base.html' %}
 
 {% block contenido %}
-    <h2>{{ titulo }}</h2> <!-- Aquí imprimimos la variable titulo del contexto -->
+    <h2>{{ titulo }}</h2>
 
-    <!-- Evaluamos con IF si la lista tiene elementos -->
+    <p><a href="{% url 'crear_auto' %}"> + Agregar nuevo auto</a></p>
+
     {% if lista_autos %}
         <ul>
-            <!-- Recorremos la lista con FOR -->
             {% for auto in lista_autos %}
-                <li>{{ auto.marca }} {{ auto.modelo }} (Año: {{ auto.año }})</li>
+                <li>
+                    {{ auto.marca }} {{ auto.modelo }} (Año: {{ auto.año }}) - ${{ auto.precio }}
+                    | <a href="{% url 'editar_auto' auto.id %}">Editar</a>
+                    | <a href="{% url 'eliminar_auto' auto.id %}">Eliminar</a>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
